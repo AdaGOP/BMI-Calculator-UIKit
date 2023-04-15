@@ -7,11 +7,13 @@
 
 import UIKit
 
+
+// Global variable - data model
+var bmiDatas: [BMIModel] = []
+
 class ViewController: UIViewController {
     
     // Outlet for all UI components
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var weightSlider: UISlider!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
@@ -27,12 +29,18 @@ class ViewController: UIViewController {
     var bmiStatus = ""
     var bmiColor = UIColor.gray
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Body Mass Index"
+        self.title = "Calculator"
         
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+
+        self.tabBarController?.tabBar.scrollEdgeAppearance = appearance
     }
     @IBAction func inputWeight(_ sender: UISlider) {
         weightValue = sender.value
@@ -60,7 +68,12 @@ class ViewController: UIViewController {
         bmiStatusLabel.textColor = bmiColor
     }
     @IBAction func saveToHistory(_ sender: UIButton) {
-        
+        bmiDatas.append(
+            BMIModel(date: Date(),
+                     bmiValue: bmiValue,
+                     bmiStatus: bmiStatus,
+                     bmiColor: bmiColor)
+        )
     }
     
     func getBMIValue(weight: Float, height: Float) -> Float {
