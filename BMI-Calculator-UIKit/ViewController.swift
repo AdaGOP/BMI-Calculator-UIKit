@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//import SwiftUI
 
 // Global variable - data model
 var bmiDatas: [BMIModel] = []

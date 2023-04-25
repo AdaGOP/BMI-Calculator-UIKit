@@ -10,6 +10,7 @@ import SwiftUI
 
 class HistoryViewController: UIViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,7 +20,7 @@ class HistoryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // 1
-        let vc = UIHostingController(rootView: HistoryView(bmiData: bmiDatas))
+        let vc = UIHostingController(rootView: HistoryView().environmentObject(BMIDatas(data: bmiDatas)))
         let historyView = vc.view!
         historyView.translatesAutoresizingMaskIntoConstraints = false
         

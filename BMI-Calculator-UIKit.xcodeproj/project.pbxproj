@@ -14,6 +14,7 @@
 		4E417E8129E7A68200940437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E417E8029E7A68200940437 /* Assets.xcassets */; };
 		4E417E8429E7A68200940437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E417E8229E7A68200940437 /* LaunchScreen.storyboard */; };
 		4E417E8C29EA65B800940437 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E417E8B29EA65B800940437 /* HistoryViewController.swift */; };
+		4E83731429F80CDF00E71B12 /* BMIDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83731329F80CDF00E71B12 /* BMIDatas.swift */; };
 		4E9723BD29EA668500C4C797 /* BMIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9723BC29EA668500C4C797 /* BMIModel.swift */; };
 		4E9723BF29EA6BDA00C4C797 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9723BE29EA6BDA00C4C797 /* HistoryView.swift */; };
 		4E9723C129EA6C1A00C4C797 /* HistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9723C029EA6C1A00C4C797 /* HistoryListView.swift */; };
@@ -29,6 +30,7 @@
 		4E417E8329E7A68200940437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E417E8529E7A68200940437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E417E8B29EA65B800940437 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		4E83731329F80CDF00E71B12 /* BMIDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIDatas.swift; sourceTree = "<group>"; };
 		4E9723BC29EA668500C4C797 /* BMIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIModel.swift; sourceTree = "<group>"; };
 		4E9723BE29EA6BDA00C4C797 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		4E9723C029EA6C1A00C4C797 /* HistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				4E9723BC29EA668500C4C797 /* BMIModel.swift */,
 				4E417E8B29EA65B800940437 /* HistoryViewController.swift */,
 				4E9723BE29EA6BDA00C4C797 /* HistoryView.swift */,
+				4E83731329F80CDF00E71B12 /* BMIDatas.swift */,
 				4E9723C029EA6C1A00C4C797 /* HistoryListView.swift */,
 				4E417E8029E7A68200940437 /* Assets.xcassets */,
 				4E417E8229E7A68200940437 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 				4E417E7C29E7A68100940437 /* ViewController.swift in Sources */,
 				4E417E7829E7A68100940437 /* AppDelegate.swift in Sources */,
 				4E417E7A29E7A68100940437 /* SceneDelegate.swift in Sources */,
+				4E83731429F80CDF00E71B12 /* BMIDatas.swift in Sources */,
 				4E417E8C29EA65B800940437 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
