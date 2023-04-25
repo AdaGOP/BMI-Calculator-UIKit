@@ -7,20 +7,14 @@
 
 import UIKit
 
-
 // Global variable - data model
 var bmiDatas: [BMIModel] = []
 
 class ViewController: UIViewController {
     
-    // Outlet for all UI components
-    @IBOutlet weak var weightSlider: UISlider!
-    @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var heightSlider: UISlider!
-    @IBOutlet weak var heightLabel: UILabel!
+    // 1
+    // Create outlet for all UI components
     
-    @IBOutlet weak var bmiValueLabel: UILabel!
-    @IBOutlet weak var bmiStatusLabel: UILabel!
     
     // Temp-variables
     var weightValue: Float = 0
@@ -32,53 +26,36 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Setup the navigation title
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Calculator"
         
+        // Setup the tab bar appearance
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .white
 
         self.tabBarController?.tabBar.scrollEdgeAppearance = appearance
     }
-    @IBAction func inputWeight(_ sender: UISlider) {
-        weightValue = sender.value
-        bmiValue = getBMIValue(weight: weightValue, height: heightValue)
-        bmiStatus = getBMIStatus(bmiValue: bmiValue)
-        bmiColor = getBMIColor(bmiValue: bmiValue)
-        
-        updateUI()
-    }
     
-    @IBAction func inputHeight(_ sender: UISlider) {
-        heightValue = sender.value
-        bmiValue = getBMIValue(weight: weightValue, height: heightValue)
-        bmiStatus = getBMIStatus(bmiValue: bmiValue)
-        bmiColor = getBMIColor(bmiValue: bmiValue)
-        
-        updateUI()
-    }
+    // 2
+    // Create @IBAction to input weight data and update the BMI value and the UI
     
-    func updateUI() {
-        weightLabel.text = String(format: "%.2f", weightValue)
-        heightLabel.text = String(format: "%.2f", heightValue)
-        bmiValueLabel.text = String(format: "%.2f", bmiValue)
-        bmiStatusLabel.text = "\(bmiStatus)"
-        bmiStatusLabel.textColor = bmiColor
-    }
-    @IBAction func saveToHistory(_ sender: UIButton) {
-        bmiDatas.insert(BMIModel(date: Date(),
-                                 bmiValue: bmiValue,
-                                 bmiStatus: bmiStatus,
-                                 bmiColor: bmiColor), at: 0)
-        
-    }
     
+    // 3
+    // Create @IBAction to input height data and update the BMI value and the UI
+    
+    
+    // 4
+    // Create @IBAction to save the data into history using global variable of bmiDatas
+    
+    
+    /// Function to get the BMI Value based on weight and height data
     func getBMIValue(weight: Float, height: Float) -> Float {
         return (weight * 10000) / (height * height)
     }
     
+    /// Function to get the BMI status based on the BMI value
     func getBMIStatus(bmiValue: Float) -> String {
         switch bmiValue {
         case 0 ..< 18.5:
@@ -95,6 +72,7 @@ class ViewController: UIViewController {
         return bmiStatus
     }
     
+    /// Function to get the BMI color based on the BMI value
     func getBMIColor(bmiValue: Float) -> UIColor {
         switch bmiValue {
         case 0 ..< 18.5:
