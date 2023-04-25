@@ -68,12 +68,11 @@ class ViewController: UIViewController {
         bmiStatusLabel.textColor = bmiColor
     }
     @IBAction func saveToHistory(_ sender: UIButton) {
-        bmiDatas.append(
-            BMIModel(date: Date(),
-                     bmiValue: bmiValue,
-                     bmiStatus: bmiStatus,
-                     bmiColor: bmiColor)
-        )
+        bmiDatas.insert(BMIModel(date: Date(),
+                                 bmiValue: bmiValue,
+                                 bmiStatus: bmiStatus,
+                                 bmiColor: bmiColor), at: 0)
+        
     }
     
     func getBMIValue(weight: Float, height: Float) -> Float {

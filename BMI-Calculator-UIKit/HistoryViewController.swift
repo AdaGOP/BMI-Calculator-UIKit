@@ -13,8 +13,7 @@ class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "History"
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,9 +31,10 @@ class HistoryViewController: UIViewController {
         // 3
         // Create and activate the constraints for the swiftui's view.
         NSLayoutConstraint.activate([
-            historyView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            historyView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            historyView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150)
+            historyView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            historyView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            historyView.topAnchor.constraint(equalTo: view.topAnchor, constant: -50),
+            historyView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
         // 4
